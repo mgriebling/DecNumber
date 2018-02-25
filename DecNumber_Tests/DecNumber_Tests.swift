@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import DecNumber_iOS
+@testable import DecNumber
 
-class DecNumber_iOSTests: XCTestCase {
+class DecNumber_Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()

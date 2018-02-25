@@ -16,4 +16,10 @@ FOUNDATION_EXPORT const unsigned char DecNumber_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DecNumber_iOS/PublicHeader.h>
 
+//#import <CommonFiles/decNumber.h>
+//#import <CommonFiles/decContext.h>
+//#import <CommonFiles/decPacked.h>
+//#import <CommonFiles/decQuad.h>
+//#import <CommonFiles/decDouble.h>
+//#import <CommonFiles/decSingle.h>
 

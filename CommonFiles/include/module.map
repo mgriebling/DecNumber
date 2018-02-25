@@ -1,0 +1,5 @@
+module LibDecNumber [system] {
+  header "decNumberL.h"
+  header "decPacked.h"
+  export *
+}
