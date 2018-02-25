@@ -444,19 +444,22 @@ public struct MGDecimal {
     }
     
     private let DECSPECIAL = UInt8(DECINF|DECNAN|DECSNAN)
-    public var isFinite : Bool   { return decimal.bits & DECSPECIAL == 0 }
-    public var isInfinite: Bool  { return decimal.bits & UInt8(DECINF) != 0 }
-    public var isNaN: Bool       { return decimal.bits & UInt8(DECNAN|DECSNAN) != 0 }
-    public var isNegative: Bool  { return decimal.bits & UInt8(DECNEG) != 0 }
-    public var isZero: Bool      { return isFinite && decimal.digits == 1 && decimal.lsu.0 == 0 }
+    public var isFinite : Bool   { return (decimal.bits & DECSPECIAL) == 0 }
+    public var isInfinite: Bool  { return (decimal.bits & UInt8(DECINF)) != 0 }
+    public var isNaN: Bool       { return (decimal.bits & UInt8(DECNAN|DECSNAN)) != 0 }
+    public var isNegative: Bool  { return (decimal.bits & UInt8(DECNEG)) != 0 }
+    public var isZero: Bool      {
+        return isFinite && decimal.digits == 1 && decimal.lsu.0 == 0
+    }
     public var isSubnormal: Bool { var n = decimal; return decNumberIsSubnormal(&n, &MGDecimal.context) == 1 }
-    public var isSpecial: Bool   { return decimal.bits & DECSPECIAL != 0 }
+    public var isSpecial: Bool   { return (decimal.bits & DECSPECIAL) != 0 }
     public var isCanonical: Bool { return true }
     public var isInteger: Bool {
         var local = decimal
         var result = decNumber()
+        decContextClearStatus(&MGDecimal.context, UInt32(DEC_Inexact))
         decNumberToIntegralExact(&result, &local, &MGDecimal.context)
-        if MGDecimal.context.status & UInt32(DEC_Inexact) != 0 {
+        if (MGDecimal.context.status & UInt32(DEC_Inexact)) != 0 {
             decContextClearStatus(&MGDecimal.context, UInt32(DEC_Inexact)); return false
         }
         return true

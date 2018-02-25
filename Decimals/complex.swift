@@ -238,6 +238,10 @@ extension Complex : CustomStringConvertible {
         let isOne = im.abs == 1
         let plus = im.isSignMinus ? isOne ? "-" : "" : "+"
         let imag = im.isZero ? "" : isOne ? "\(plus)i" : "\(plus)\(im)i"
+        if re.isZero && !imag.isEmpty {
+            if imag.hasPrefix("+") { return String(imag.dropFirst()) }
+            return imag
+        }
         return "\(re)\(imag)"
     }
 }
@@ -495,7 +499,7 @@ public extension Complex {
         let one = T(1)
         while true {
             if !(i & one).isZero { Y *= ix }
-            i /= 2
+            i = (i / 2).rounded(FloatingPointRoundingRule.towardZero) // truncate result of division
             if i == 0 { break }
             ix *= ix
         }
