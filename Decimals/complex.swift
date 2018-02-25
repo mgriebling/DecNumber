@@ -310,7 +310,7 @@ extension Complex : ExpressibleByStringLiteral {
             }
             if let range = vs.rangeOfCharacter(from: signChars) {
                 // check if this is an exponent
-                if let expRange = vs.range(of: exponent), expRange.lowerBound == range.lowerBound {
+                if let expRange = vs.range(of: exponent), expRange.upperBound == range.lowerBound {
                     // search beyond the exponent
                     let start = vs.index(after: range.lowerBound)
                     let newRange = Range(uncheckedBounds: (start, vs.endIndex))
