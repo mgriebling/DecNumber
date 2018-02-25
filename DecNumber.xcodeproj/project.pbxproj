@@ -53,6 +53,7 @@
 		4731A8162042180900FE9F50 /* ComplexDec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8142042180900FE9F50 /* ComplexDec.swift */; };
 		4731A8182042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
 		4731A8192042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
+		4731A81C2042D7EF00FE9F50 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4731A81B2042D7EF00FE9F50 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		4731A811204216F600FE9F50 /* MGDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDecimal.swift; sourceTree = "<group>"; };
 		4731A8142042180900FE9F50 /* ComplexDec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexDec.swift; sourceTree = "<group>"; };
 		4731A8172042183800FE9F50 /* complex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = complex.swift; sourceTree = "<group>"; };
+		4731A81B2042D7EF00FE9F50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		4731A7572041CEAA00FE9F50 = {
 			isa = PBXGroup;
 			children = (
+				4731A81B2042D7EF00FE9F50 /* README.md */,
 				4731A80F204214D500FE9F50 /* Decimals */,
 				4731A7972041CF1200FE9F50 /* CommonFiles */,
 				4731A7632041CEAA00FE9F50 /* DecNumber_iOS */,
@@ -410,6 +413,7 @@
 			files = (
 				4731A7F72041D45800FE9F50 /* readme.txt in Resources */,
 				4731A7F32041D45800FE9F50 /* ICU-license.html in Resources */,
+				4731A81C2042D7EF00FE9F50 /* README.md in Resources */,
 				4731A8012041D45800FE9F50 /* decnumber.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +635,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CommonFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_PRIVATE_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
@@ -656,6 +661,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CommonFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_PRIVATE_FILE = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
@@ -713,7 +719,7 @@
 				INFOPLIST_FILE = CommonFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
 				PRODUCT_NAME = DecNumber;
 				SDKROOT = macosx;
@@ -740,7 +746,7 @@
 				INFOPLIST_FILE = CommonFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
 				PRODUCT_NAME = DecNumber;
 				SDKROOT = macosx;
