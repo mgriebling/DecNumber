@@ -144,9 +144,6 @@
 		4731A7572041CEAA00FE9F50 = {
 			isa = PBXGroup;
 			children = (
-				4731A7DE2041D45700FE9F50 /* decnumber.pdf */,
-				4731A7D72041D45700FE9F50 /* ICU-license.html */,
-				4731A7D92041D45700FE9F50 /* readme.txt */,
 				4731A80F204214D500FE9F50 /* Decimals */,
 				4731A7972041CF1200FE9F50 /* CommonFiles */,
 				4731A7632041CEAA00FE9F50 /* DecNumber_iOS */,
@@ -195,6 +192,9 @@
 		4731A7972041CF1200FE9F50 /* CommonFiles */ = {
 			isa = PBXGroup;
 			children = (
+				4731A7D92041D45700FE9F50 /* readme.txt */,
+				4731A7DE2041D45700FE9F50 /* decnumber.pdf */,
+				4731A7D72041D45700FE9F50 /* ICU-license.html */,
 				4731A7652041CEAA00FE9F50 /* Info.plist */,
 				4731A81A20421BD200FE9F50 /* include */,
 				4731A810204215A100FE9F50 /* libfiles */,
