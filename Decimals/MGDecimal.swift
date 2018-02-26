@@ -1444,7 +1444,7 @@ extension MGDecimal : Comparable {
 }
 
 //
-// Allows things like -> a : Decimal = 12345
+// Allows things like -> a : MGDecimal = 12345
 //
 
 extension MGDecimal : ExpressibleByIntegerLiteral {
@@ -1454,7 +1454,7 @@ extension MGDecimal : ExpressibleByIntegerLiteral {
 }
 
 //
-// Allows things like -> a : [Decimal] = [1.2, 3.4, 5.67]
+// Allows things like -> a : [MGDecimal] = [1.2, 3.4, 5.67]
 // Note: These conversions are not guaranteed to be exact.
 //
 
@@ -1465,7 +1465,7 @@ extension MGDecimal : ExpressibleByFloatLiteral {
 }
 
 //
-// Allows things like -> a : Set<Decimal> = [12.4, 15, 100]
+// Allows things like -> a : Set<MGDecimal> = [12.4, 15, 100]
 //
 
 extension MGDecimal : Hashable {
@@ -1477,7 +1477,7 @@ extension MGDecimal : Hashable {
 }
 
 //
-// Allows things like -> a : Decimal = "12345"
+// Allows things like -> a : MGDecimal = "12345"
 //
 
 extension MGDecimal : ExpressibleByStringLiteral {

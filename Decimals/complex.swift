@@ -33,13 +33,6 @@ public protocol RealType : FloatingPoint {
     // for StringLiteralConvertible support
     init?(_ value: String)
     
-    // class vars are now gone 
-    // because they will be static vars in Swift 1.2, 
-    // making them incompatible to one another
-//    static var infinity: Self { get }
-//    static var NaN: Self { get }
-//    static var quietNaN: Self { get }
-    
     var floatingPointClass: FloatingPointClassification { get }
     var isSignMinus: Bool { get }
     var isNormal: Bool { get }
@@ -83,76 +76,7 @@ public protocol RealType : FloatingPoint {
     func hypot(_: Self)->Self
     func atan2(_: Self)->Self
     func pow(_: Self)->Self
-    
-//    static var LN10:Self { get }
-//    static var epsilon:Self { get }
 }
-
-//// Double is default since floating-point literals are Double by default
-//extension Double : RealType {
-//
-//    public var abs:Double { return Swift.abs(self) }
-//    public func cos()->Double { return Foundation.cos(self) }
-//    public func exp()->Double { return Foundation.exp(self) }
-//    public func ln()->Double { return Foundation.log(self) }
-//    public func sin()->Double { return Foundation.sin(self) }
-//    public func sqrt()->Double { return Foundation.sqrt(self) }
-//    public func sqrt()->Double { return Foundation.sqrt(self) }
-//    public func atan2(_ y:Double)->Double { return Foundation.atan2(self, y) }
-//    public func hypot(_ y:Double)->Double { return Foundation.hypot(self, y) }
-//    public func pow(_ y:Double)->Double { return Foundation.pow(self, y) }
-//    
-//    public var isSignMinus: Bool { return self.sign == .minus }
-//    public var isSignaling: Bool { return self.isSignalingNaN }
-//    
-//    // these ought to be static let
-//    // but give users a chance to overwrite it
-//    static var PI = 3.14159265358979323846264338327950288419716939937510
-//    static var π = PI
-//    static var E =  2.718281828459045235360287471352662497757247093699
-//    static var e = E
-//    static var LN2 = 0.6931471805599453094172321214581765680755001343602552
-//    static var LOG2E = 1 / LN2
-//    static var LN10 = 2.3025850929940456840179914546843642076011014886287729
-//    static var LOG10E = 1/LN10
-//    static var SQRT2 = 1.4142135623730950488016887242096980785696718753769480
-//    static var SQRT1_2 = 1/SQRT2
-//    static var epsilon = 0x1p-52
-//    /// self * 1.0i
-//    var i:Complex<Double>{ return Complex<Double>(0.0, self) }
-//}
-//
-//// But when explicitly typed you can use Float
-//extension Float : RealType {
-//    public var abs:Float { return Swift.abs(self) }
-//    public func cos()->Float { return Foundation.cos(self) }
-//    public func exp()->Float { return Foundation.exp(self) }
-//    public func ln()->Float { return Foundation.logf(self) }
-//    public func sin()->Float { return Foundation.sin(self) }
-//    public func sqrt()->Float { return Foundation.sqrt(self) }
-//    public func hypot(_ y:Float)->Float { return Foundation.hypot(self, y) }
-//    public func atan2(_ y:Float)->Float { return Foundation.atan2(self, y) }
-//    public func pow(_ y:Float)->Float { return Foundation.pow(self, y) }
-//    
-//    public var isSignMinus: Bool { return self.sign == .minus }
-//    public var isSignaling: Bool { return self.isSignalingNaN }
-//    
-//    // these ought to be static let
-//    // but give users a chance to overwrite it
-//    static var PI:Float = 3.14159265358979323846264338327950288419716939937510
-//    static var π:Float = PI
-//    static var E:Float =  2.718281828459045235360287471352662497757247093699
-//    static var e:Float = E
-//    static var LN2:Float = 0.6931471805599453094172321214581765680755001343602552
-//    static var LOG2E:Float = 1 / LN2
-//    static var LN10:Float = 2.3025850929940456840179914546843642076011014886287729
-//    static var LOG10E:Float = 1/LN10
-//    static var SQRT2:Float = 1.4142135623730950488016887242096980785696718753769480
-//    static var SQRT1_2:Float = 1/SQRT2
-//    static var epsilon:Float = 0x1p-23
-//    /// self * 1.0i
-//    var i:Complex<Float>{ return Complex<Float>(0.0 as Float, self) }
-//}
 
 // el corazon
 public struct Complex<T:RealType>  {
@@ -271,16 +195,12 @@ extension Complex : ExpressibleByStringLiteral {
     //
     // StringLiteralConvertible protocol
     //
-    public init(stringLiteral value: ExtendedGraphemeClusterLiteralType) {
-        self.init(value)
-    }
+    public init(stringLiteral value: ExtendedGraphemeClusterLiteralType) { self.init(value) }
     
     //
     // StringLiteralConvertible protocol
     //
-    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
-        self.init("\(value)")
-    }
+    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) { self.init("\(value)") }
     
     //
     // StringLiteralConvertible protocol
@@ -355,52 +275,24 @@ extension Complex : ExpressibleByStringLiteral {
 
 public extension Complex {
     
-    static public func == (lhs:Complex<T>, rhs:T) -> Bool {
-        return lhs.re == rhs && lhs.im.isZero
-    }
-    static public func == (lhs:T, rhs:Complex<T>) -> Bool {
-        return rhs.re == lhs && rhs.im.isZero
-    }
+    static public func == (lhs:Complex<T>, rhs:T) -> Bool { return lhs.re == rhs && lhs.im.isZero }
+    static public func == (lhs:T, rhs:Complex<T>) -> Bool { return rhs.re == lhs && rhs.im.isZero }
     
     // +, +=
-    static public prefix func + (z:Complex<T>) -> Complex<T> {
-        return z
-    }
-    static public func + (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs.re + rhs.re, lhs.im + rhs.im)
-    }
-    static public func + (lhs:Complex<T>, rhs:T) -> Complex<T> {
-        return lhs + Complex(rhs)
-    }
-    static public func + (lhs:T, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs) + rhs
-    }
-    static public func += (lhs:inout Complex<T>, rhs:Complex<T>) {
-        lhs.re += rhs.re; lhs.im += rhs.im
-    }
-    static public func += (lhs:inout Complex<T>, rhs:T) {
-        lhs.re += rhs
-    }
+    static public prefix func + (z:Complex<T>) -> Complex<T> { return z }
+    static public func + (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> { return Complex(lhs.re + rhs.re, lhs.im + rhs.im) }
+    static public func + (lhs:Complex<T>, rhs:T) -> Complex<T> { return lhs + Complex(rhs) }
+    static public func + (lhs:T, rhs:Complex<T>) -> Complex<T> { return Complex(lhs) + rhs }
+    static public func += (lhs:inout Complex<T>, rhs:Complex<T>) { lhs.re += rhs.re; lhs.im += rhs.im }
+    static public func += (lhs:inout Complex<T>, rhs:T) { lhs.re += rhs }
     
     // -, -=
-    static public prefix func - (z:Complex<T>) -> Complex<T> {
-        return Complex<T>(-z.re, -z.im)
-    }
-    static public func - (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs.re - rhs.re, lhs.im - rhs.im)
-    }
-    static public func - (lhs:Complex<T>, rhs:T) -> Complex<T> {
-        return lhs - Complex(rhs)
-    }
-    static public func - (lhs:T, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs) - rhs
-    }
-    static public func -= (lhs:inout Complex<T>, rhs:Complex<T>) {
-        lhs.re -= rhs.re ; lhs.im -= rhs.im
-    }
-    static public func -= (lhs:inout Complex<T>, rhs:T) {
-        lhs.re -= rhs
-    }
+    static public prefix func - (z:Complex<T>) -> Complex<T> { return Complex<T>(-z.re, -z.im) }
+    static public func - (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> { return Complex(lhs.re - rhs.re, lhs.im - rhs.im) }
+    static public func - (lhs:Complex<T>, rhs:T) -> Complex<T> { return lhs - Complex(rhs) }
+    static public func - (lhs:T, rhs:Complex<T>) -> Complex<T> { return Complex(lhs) - rhs }
+    static public func -= (lhs:inout Complex<T>, rhs:Complex<T>) { lhs.re -= rhs.re; lhs.im -= rhs.im }
+    static public func -= (lhs:inout Complex<T>, rhs:T) { lhs.re -= rhs }
     
     // *, *=
     static public func * (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> {
@@ -409,18 +301,10 @@ public extension Complex {
             lhs.re * rhs.im + lhs.im * rhs.re
         )
     }
-    static public func * (lhs:Complex<T>, rhs:T) -> Complex<T> {
-        return Complex(lhs.re * rhs, lhs.im * rhs)
-    }
-    static public func * (lhs:T, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs * rhs.re, lhs * rhs.im)
-    }
-    static public func *= (lhs:inout Complex<T>, rhs:Complex<T>) {
-        lhs = lhs * rhs
-    }
-    static public func *= (lhs:inout Complex<T>, rhs:T) {
-        lhs = lhs * rhs
-    }
+    static public func * (lhs:Complex<T>, rhs:T) -> Complex<T> { return Complex(lhs.re * rhs, lhs.im * rhs) }
+    static public func * (lhs:T, rhs:Complex<T>) -> Complex<T> { return Complex(lhs * rhs.re, lhs * rhs.im) }
+    static public func *= (lhs:inout Complex<T>, rhs:Complex<T>) { lhs = lhs * rhs }
+    static public func *= (lhs:inout Complex<T>, rhs:T) { lhs = lhs * rhs }
     
     // /, /=
     //
@@ -444,18 +328,10 @@ public extension Complex {
             
         }
     }
-    static public func / (lhs:Complex<T>, rhs:T) -> Complex<T> {
-        return Complex(lhs.re / rhs, lhs.im / rhs)
-    }
-    static public func / (lhs:T, rhs:Complex<T>) -> Complex<T> {
-        return Complex(lhs) / rhs
-    }
-    static public func /= (lhs:inout Complex<T>, rhs:Complex<T>) {
-        lhs = lhs / rhs
-    }
-    static public func /= (lhs:inout Complex<T>, rhs:T) {
-        lhs = lhs / rhs
-    }
+    static public func / (lhs:Complex<T>, rhs:T) -> Complex<T> { return Complex(lhs.re / rhs, lhs.im / rhs) }
+    static public func / (lhs:T, rhs:Complex<T>) -> Complex<T> { return Complex(lhs) / rhs }
+    static public func /= (lhs:inout Complex<T>, rhs:Complex<T>) { lhs = lhs / rhs }
+    static public func /= (lhs:inout Complex<T>, rhs:T) { lhs = lhs / rhs }
     
     // exp(z)
     static public func exp(_ z:Complex<T>) -> Complex<T> {
@@ -465,9 +341,7 @@ public extension Complex {
     }
     
     // ln(z)
-    static public func ln(_ z:Complex<T>) -> Complex<T> {
-        return Complex(z.abs.ln(), z.arg)
-    }
+    static public func ln(_ z:Complex<T>) -> Complex<T> { return Complex(z.abs.ln(), z.arg) }
     
     // log10(z) -- just because C++ has it
     static public func log10(_ z:Complex<T>) -> Complex<T> { return ln(z)/T(10).ln() }
@@ -476,17 +350,13 @@ public extension Complex {
     // pow(b, x)
     static public func pow(_ lhs:Complex<T>, _ rhs:Complex<T>) -> Complex<T> {
         if lhs == T(0) { return 1 } // 0 ** 0 == 1
-//        if rhs == T(-1) { return 1 / lhs } // x ** -1 == 1/x covered below
         if rhs.im.isZero && rhs.re.isInteger { return ipow(lhs, rhs.re.rounded()) }
         let z = ln(lhs) * rhs
         return exp(z)
     }
-    static public func pow(_ lhs:Complex<T>, _ rhs:T) -> Complex<T> {
-        return pow(lhs, Complex(rhs))
-    }
-    static public func pow(_ lhs:T, _ rhs:Complex<T>) -> Complex<T> {
-        return pow(Complex(lhs), rhs)
-    }
+    static public func pow(_ lhs:Complex<T>, _ rhs:T) -> Complex<T> { return pow(lhs, Complex(rhs)) }
+    static public func pow(_ lhs:T, _ rhs:Complex<T>) -> Complex<T> { return pow(Complex(lhs), rhs) }
+    
     static public func ipow(_ x:Complex<T>, _ power: T) -> Complex<T> {
         // This gives better accuracy than the standard power method
         if x.im.isZero { return Complex(x.re.pow(power)) }  // standard library can handle this
@@ -511,21 +381,11 @@ public extension Complex {
     }
     
     // **, **=
-    static public func ** (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> {
-        return pow(lhs, rhs)
-    }
-    static public func ** (lhs:T, rhs:Complex<T>) -> Complex<T> {
-        return pow(lhs, rhs)
-    }
-    static public func ** (lhs:Complex<T>, rhs:T) -> Complex<T> {
-        return pow(lhs, rhs)
-    }
-    static public func **= (lhs:inout Complex<T>, rhs:Complex<T>) {
-        lhs = pow(lhs, rhs)
-    }
-    static public func **= (lhs:inout Complex<T>, rhs:T) {
-        lhs = pow(lhs, rhs)
-    }
+    static public func ** (lhs:Complex<T>, rhs:Complex<T>) -> Complex<T> { return pow(lhs, rhs) }
+    static public func ** (lhs:T, rhs:Complex<T>) -> Complex<T> { return pow(lhs, rhs) }
+    static public func ** (lhs:Complex<T>, rhs:T) -> Complex<T> { return pow(lhs, rhs) }
+    static public func **= (lhs:inout Complex<T>, rhs:Complex<T>) { lhs = pow(lhs, rhs) }
+    static public func **= (lhs:inout Complex<T>, rhs:T) { lhs = pow(lhs, rhs) }
     
     // sqrt(z)
     static public func sqrt(_ z:Complex<T>) -> Complex<T> {
@@ -549,14 +409,13 @@ public extension Complex {
             return Complex(re,  ((-z.re + d)/T(3)).cbrt())
         }
     }
+    
     // cos(z)
     static public func cos(_ z:Complex<T>) -> Complex<T> {
-        // return (exp(i*z) + exp(-i*z)) / 2
         return (exp(z.i) + exp(-z.i)) / 2
     }
     // sin(z)
     static public func sin(_ z:Complex<T>) -> Complex<T> {
-        // return (exp(i*z) - exp(-i*z)) / (2*i)
         return -(exp(z.i) - exp(-z.i)).i / 2
     }
     // tan(z)
@@ -625,36 +484,19 @@ public extension Complex {
     static private func approx (_ lhs:T, _ rhs:T) -> Bool {
         if lhs == rhs { return true }
         let t = (rhs - lhs) / rhs
-        let epsilon = MemoryLayout<T>.size < 8 ? 0x1p-23 : 0x1p-52
-        return t.abs <= T(2) * T(epsilon)
+        let epsilon = t.ulp
+        return t.abs <= T(2) * epsilon
     }
     static public func =~ (lhs:Complex<T>, rhs:Complex<T>) -> Bool {
         if lhs == rhs { return true }
         return approx(lhs.abs, rhs.abs)
     }
-    static public func =~ (lhs:Complex<T>, rhs:T) -> Bool {
-        return approx(lhs.abs, rhs.abs)
-    }
-    static public func =~ (lhs:T, rhs:Complex<T>) -> Bool {
-        return approx(lhs.abs, rhs.abs)
-    }
-//    static public func !~ (lhs:T, rhs:T) -> Bool {
-//        return !(lhs =~ rhs)
-//    }
-    static public func !~ (lhs:Complex<T>, rhs:Complex<T>) -> Bool {
-        return !(lhs =~ rhs)
-    }
-    static public func !~ (lhs:Complex<T>, rhs:T) -> Bool {
-        return !(lhs =~ rhs)
-    }
-    static public func !~ (lhs:T, rhs:Complex<T>) -> Bool {
-        return !(lhs =~ rhs)
-    }
+    static public func =~ (lhs:Complex<T>, rhs:T) -> Bool { return approx(lhs.abs, rhs.abs) }
+    static public func =~ (lhs:T, rhs:Complex<T>) -> Bool { return approx(lhs.abs, rhs.abs) }
+    static public func !~ (lhs:Complex<T>, rhs:Complex<T>) -> Bool { return !(lhs =~ rhs) }
+    static public func !~ (lhs:Complex<T>, rhs:T) -> Bool { return !(lhs =~ rhs) }
+    static public func !~ (lhs:T, rhs:Complex<T>) -> Bool { return !(lhs =~ rhs) }
     
 }
-
-// typealiases
-//typealias Complex64 = Complex<Double>
-//typealias Complex32 = Complex<Float>
 
 
