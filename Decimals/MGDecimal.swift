@@ -44,7 +44,7 @@ public struct MGDecimal {
         var crounding : rounding { return rounding(self.rawValue) }
     }
     
-    public enum AngularMeasure {
+    public enum AngularMeasure : Int {
         case radians, degrees, gradians
     }
     
@@ -1494,39 +1494,70 @@ extension MGDecimal : ExpressibleByStringLiteral {
 // Convenience functions
 //
 
-public extension MGDecimal {
+extension MGDecimal {
     
     public func sqr() -> MGDecimal { return self * self }
     public var ² : MGDecimal { return sqr() }
     
 }
 
-public extension MGDecimal {
+extension MGDecimal : Codable {
     
     // MARK: - Archival Operations
+//
+//    static var UInt8Type = "C".cString(using: String.Encoding.ascii)!
+//    static var Int32Type = "l".cString(using: String.Encoding.ascii)!
+//
+//    public init? (coder: NSCoder) {
+//        var scale : Int32 = 0
+//        var size : Int32 = 0
+//        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
+//        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
+//        var bytes = [UInt8](repeating: 0, count: Int(size))
+//        coder.decodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
+//        decPackedToNumber(&bytes, Int32(size), &scale, &decimal)
+//    }
+//
+//    public func encode(with coder: NSCoder) {
+//        var local = decimal
+//        var scale : Int32 = 0
+//        var size = decimal.digits/2+1
+//        var bytes = [UInt8](repeating: 0, count: Int(size))
+//        decPackedFromNumber(&bytes, size, &scale, &local)
+//        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
+//        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
+//        coder.encodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
+//    }
     
-    static var UInt8Type = "C".cString(using: String.Encoding.ascii)!
-    static var Int32Type = "l".cString(using: String.Encoding.ascii)!
-    
-    public init? (coder: NSCoder) {
-        var scale : Int32 = 0
-        var size : Int32 = 0
-        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
-        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
-        var bytes = [UInt8](repeating: 0, count: Int(size))
-        coder.decodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
-        decPackedToNumber(&bytes, Int32(size), &scale, &decimal)
+    enum CodingKeys: String, CodingKey {
+        case size
+        case scale
+        case bytes
+        case angle
     }
     
-    public func encode(with coder: NSCoder) {
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.init()
+        let size = try values.decode(Int32.self, forKey: .size)
+        var scale = try values.decode(Int32.self, forKey: .scale)
+        let bytes = try values.decode([UInt8].self, forKey: .bytes)
+        let angle = try values.decode(Int.self, forKey: .angle)
+        angularMeasure = AngularMeasure(rawValue: angle) ?? .degrees
+        decPackedToNumber(bytes, size, &scale, &decimal)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
         var local = decimal
-        var scale : Int32 = 0
-        var size = decimal.digits/2+1
+        var scale = Int32(0)
+        let size = Int32(decimal.digits/2+1)
         var bytes = [UInt8](repeating: 0, count: Int(size))
         decPackedFromNumber(&bytes, size, &scale, &local)
-        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
-        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
-        coder.encodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(size, forKey: .size)
+        try container.encode(scale, forKey: .scale)
+        try container.encode(bytes, forKey: .bytes)
+        try container.encode(angularMeasure.rawValue, forKey: .angle)
     }
     
 }
