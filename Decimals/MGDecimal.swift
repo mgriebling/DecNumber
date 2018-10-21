@@ -234,6 +234,13 @@ public struct MGDecimal {
         }
     }
     
+    public init(_ d: Double) {
+        // we cheat by first converting to a string since Double conversions aren't accurate anyway
+        let s = String(d)
+        initContext(digits:  MGDecimal.nominalDigits)
+        decNumberFromString(&decimal, s, &MGDecimal.context)
+    }
+    
     public init(sign: FloatingPointSign, exponent: Int, significand: MGDecimal) {
         var a = significand
         var exp = MGDecimal(exponent)
@@ -1504,30 +1511,6 @@ extension MGDecimal {
 extension MGDecimal : Codable {
     
     // MARK: - Archival Operations
-//
-//    static var UInt8Type = "C".cString(using: String.Encoding.ascii)!
-//    static var Int32Type = "l".cString(using: String.Encoding.ascii)!
-//
-//    public init? (coder: NSCoder) {
-//        var scale : Int32 = 0
-//        var size : Int32 = 0
-//        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
-//        coder.decodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
-//        var bytes = [UInt8](repeating: 0, count: Int(size))
-//        coder.decodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
-//        decPackedToNumber(&bytes, Int32(size), &scale, &decimal)
-//    }
-//
-//    public func encode(with coder: NSCoder) {
-//        var local = decimal
-//        var scale : Int32 = 0
-//        var size = decimal.digits/2+1
-//        var bytes = [UInt8](repeating: 0, count: Int(size))
-//        decPackedFromNumber(&bytes, size, &scale, &local)
-//        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &size)
-//        coder.encodeValue(ofObjCType: &MGDecimal.Int32Type, at: &scale)
-//        coder.encodeArray(ofObjCType: &MGDecimal.UInt8Type, count: Int(size), at: &bytes)
-//    }
     
     enum CodingKeys: String, CodingKey {
         case size
