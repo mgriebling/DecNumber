@@ -21,12 +21,16 @@
 //  complex comparisons and strides are not possible.
 //
 //  Created by Mike Griebling on 30 Jul 2017.
-//  Copyright © 2017-2018 Solinst Canada. All rights reserved.
+//  Copyright © 2017-2018 Computer Inspirations. All rights reserved.
 //
 
 import Foundation
 
 extension MGDecimal : RealType {
+    
+    public init<Source>(_ value: Source) where Source : BinaryInteger {
+        self.init(UInt(value))
+    }
 
     public static func - (_ a: MGDecimal, _ b: MGDecimal) -> MGDecimal { return a.sub(b) }
     public static prefix func - (_ a: MGDecimal) -> MGDecimal { return a.negate() }
@@ -35,12 +39,12 @@ extension MGDecimal : RealType {
     public func hypot(_ arg: MGDecimal) -> MGDecimal { return self.hypot(y:arg) }
 
     public var isSignaling: Bool { return self.isSpecial }
-    public var isNormal: Bool    { return self.isNormal }
+    public var isNormal: Bool    { return !self.isSubnormal }
     public var isSignMinus: Bool { return self.isNegative }
 
     public init?(_ value: String) { self.init(value, digits: MGDecimal.digits, radix: 10) }
-    public init(_ value: Float)   { self.init(value) }
-    public init(_ value: Double)  { self.init(value) }
+    public init(_ value: Float)   { self.init(Double(value)) }
+//    public init(_ value: Double)  { self.init(value.description) }
     public init(_ value: Int64)   { self.init(Int(value)) }
     public init(_ value: UInt64)  { self.init(UInt(value)) }
     public init(_ value: Int32)   { self.init(Int(value)) }

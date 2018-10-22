@@ -1,850 +1,855 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 48;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 48;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		4731A76B2041CEAA00FE9F50 /* DecNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4731A7612041CEAA00FE9F50 /* DecNumber.framework */; };
-		4731A7702041CEAA00FE9F50 /* DecNumber_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */; };
-		4731A7722041CEAA00FE9F50 /* DecNumber_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4731A7892041CED600FE9F50 /* DecNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4731A7802041CED600FE9F50 /* DecNumber.framework */; };
-		4731A7902041CED600FE9F50 /* DecNumber_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7822041CED600FE9F50 /* DecNumber_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4731A7982041CFB900FE9F50 /* DecNumber_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */; };
-		4731A7E32041D45800FE9F50 /* decSingle.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7CF2041D45700FE9F50 /* decSingle.c */; };
-		4731A7E42041D45800FE9F50 /* decSingle.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7CF2041D45700FE9F50 /* decSingle.c */; };
-		4731A7E52041D45800FE9F50 /* decDPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D02041D45700FE9F50 /* decDPD.h */; };
-		4731A7E62041D45800FE9F50 /* decDPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D02041D45700FE9F50 /* decDPD.h */; };
-		4731A7E72041D45800FE9F50 /* decNumberL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D12041D45700FE9F50 /* decNumberL.h */; };
-		4731A7E82041D45800FE9F50 /* decNumberL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D12041D45700FE9F50 /* decNumberL.h */; };
-		4731A7E92041D45800FE9F50 /* decContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D22041D45700FE9F50 /* decContext.h */; };
-		4731A7EA2041D45800FE9F50 /* decContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D22041D45700FE9F50 /* decContext.h */; };
-		4731A7EB2041D45800FE9F50 /* decPacked.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7D32041D45700FE9F50 /* decPacked.c */; };
-		4731A7EC2041D45800FE9F50 /* decPacked.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7D32041D45700FE9F50 /* decPacked.c */; };
-		4731A7ED2041D45800FE9F50 /* decQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D42041D45700FE9F50 /* decQuad.h */; };
-		4731A7EE2041D45800FE9F50 /* decQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D42041D45700FE9F50 /* decQuad.h */; };
-		4731A7EF2041D45800FE9F50 /* decSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D52041D45700FE9F50 /* decSingle.h */; };
-		4731A7F02041D45800FE9F50 /* decSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D52041D45700FE9F50 /* decSingle.h */; };
-		4731A7F32041D45800FE9F50 /* ICU-license.html in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D72041D45700FE9F50 /* ICU-license.html */; };
-		4731A7F42041D45800FE9F50 /* ICU-license.html in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D72041D45700FE9F50 /* ICU-license.html */; };
-		4731A7F52041D45800FE9F50 /* decDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D82041D45700FE9F50 /* decDouble.h */; };
-		4731A7F62041D45800FE9F50 /* decDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D82041D45700FE9F50 /* decDouble.h */; };
-		4731A7F72041D45800FE9F50 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D92041D45700FE9F50 /* readme.txt */; };
-		4731A7F82041D45800FE9F50 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D92041D45700FE9F50 /* readme.txt */; };
-		4731A7FB2041D45800FE9F50 /* decPacked.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7DB2041D45700FE9F50 /* decPacked.h */; };
-		4731A7FC2041D45800FE9F50 /* decPacked.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7DB2041D45700FE9F50 /* decPacked.h */; };
-		4731A7FD2041D45800FE9F50 /* decQuad.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DC2041D45700FE9F50 /* decQuad.c */; };
-		4731A7FE2041D45800FE9F50 /* decQuad.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DC2041D45700FE9F50 /* decQuad.c */; };
-		4731A7FF2041D45800FE9F50 /* decNumber.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DD2041D45700FE9F50 /* decNumber.c */; };
-		4731A8002041D45800FE9F50 /* decNumber.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DD2041D45700FE9F50 /* decNumber.c */; };
-		4731A8012041D45800FE9F50 /* decnumber.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7DE2041D45700FE9F50 /* decnumber.pdf */; };
-		4731A8022041D45800FE9F50 /* decnumber.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7DE2041D45700FE9F50 /* decnumber.pdf */; };
-		4731A8032041D45800FE9F50 /* decDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DF2041D45700FE9F50 /* decDouble.c */; };
-		4731A8042041D45800FE9F50 /* decDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DF2041D45700FE9F50 /* decDouble.c */; };
-		4731A8072041D45800FE9F50 /* decContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7E12041D45700FE9F50 /* decContext.c */; };
-		4731A8082041D45800FE9F50 /* decContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7E12041D45700FE9F50 /* decContext.c */; };
-		4731A8092041D45800FE9F50 /* decNumberLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7E22041D45800FE9F50 /* decNumberLocal.h */; };
-		4731A80A2041D45800FE9F50 /* decNumberLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7E22041D45800FE9F50 /* decNumberLocal.h */; };
-		4731A812204216F600FE9F50 /* MGDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A811204216F600FE9F50 /* MGDecimal.swift */; };
-		4731A813204216F600FE9F50 /* MGDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A811204216F600FE9F50 /* MGDecimal.swift */; };
-		4731A8152042180900FE9F50 /* ComplexDec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8142042180900FE9F50 /* ComplexDec.swift */; };
-		4731A8162042180900FE9F50 /* ComplexDec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8142042180900FE9F50 /* ComplexDec.swift */; };
-		4731A8182042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
-		4731A8192042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
-		4731A81C2042D7EF00FE9F50 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4731A81B2042D7EF00FE9F50 /* README.md */; };
+        4731A76B2041CEAA00FE9F50 /* DecNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4731A7612041CEAA00FE9F50 /* DecNumber.framework */; };
+        4731A7702041CEAA00FE9F50 /* DecNumber_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */; };
+        4731A7722041CEAA00FE9F50 /* DecNumber_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        4731A7892041CED600FE9F50 /* DecNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4731A7802041CED600FE9F50 /* DecNumber.framework */; };
+        4731A7902041CED600FE9F50 /* DecNumber_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7822041CED600FE9F50 /* DecNumber_Mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        4731A7982041CFB900FE9F50 /* DecNumber_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */; };
+        4731A7E32041D45800FE9F50 /* decSingle.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7CF2041D45700FE9F50 /* decSingle.c */; };
+        4731A7E42041D45800FE9F50 /* decSingle.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7CF2041D45700FE9F50 /* decSingle.c */; };
+        4731A7E52041D45800FE9F50 /* decDPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D02041D45700FE9F50 /* decDPD.h */; };
+        4731A7E62041D45800FE9F50 /* decDPD.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D02041D45700FE9F50 /* decDPD.h */; };
+        4731A7E72041D45800FE9F50 /* decNumberL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D12041D45700FE9F50 /* decNumberL.h */; };
+        4731A7E82041D45800FE9F50 /* decNumberL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D12041D45700FE9F50 /* decNumberL.h */; };
+        4731A7E92041D45800FE9F50 /* decContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D22041D45700FE9F50 /* decContext.h */; };
+        4731A7EA2041D45800FE9F50 /* decContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D22041D45700FE9F50 /* decContext.h */; };
+        4731A7EB2041D45800FE9F50 /* decPacked.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7D32041D45700FE9F50 /* decPacked.c */; };
+        4731A7EC2041D45800FE9F50 /* decPacked.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7D32041D45700FE9F50 /* decPacked.c */; };
+        4731A7ED2041D45800FE9F50 /* decQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D42041D45700FE9F50 /* decQuad.h */; };
+        4731A7EE2041D45800FE9F50 /* decQuad.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D42041D45700FE9F50 /* decQuad.h */; };
+        4731A7EF2041D45800FE9F50 /* decSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D52041D45700FE9F50 /* decSingle.h */; };
+        4731A7F02041D45800FE9F50 /* decSingle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D52041D45700FE9F50 /* decSingle.h */; };
+        4731A7F32041D45800FE9F50 /* ICU-license.html in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D72041D45700FE9F50 /* ICU-license.html */; };
+        4731A7F42041D45800FE9F50 /* ICU-license.html in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D72041D45700FE9F50 /* ICU-license.html */; };
+        4731A7F52041D45800FE9F50 /* decDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D82041D45700FE9F50 /* decDouble.h */; };
+        4731A7F62041D45800FE9F50 /* decDouble.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7D82041D45700FE9F50 /* decDouble.h */; };
+        4731A7F72041D45800FE9F50 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D92041D45700FE9F50 /* readme.txt */; };
+        4731A7F82041D45800FE9F50 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7D92041D45700FE9F50 /* readme.txt */; };
+        4731A7FB2041D45800FE9F50 /* decPacked.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7DB2041D45700FE9F50 /* decPacked.h */; };
+        4731A7FC2041D45800FE9F50 /* decPacked.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7DB2041D45700FE9F50 /* decPacked.h */; };
+        4731A7FD2041D45800FE9F50 /* decQuad.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DC2041D45700FE9F50 /* decQuad.c */; };
+        4731A7FE2041D45800FE9F50 /* decQuad.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DC2041D45700FE9F50 /* decQuad.c */; };
+        4731A7FF2041D45800FE9F50 /* decNumber.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DD2041D45700FE9F50 /* decNumber.c */; };
+        4731A8002041D45800FE9F50 /* decNumber.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DD2041D45700FE9F50 /* decNumber.c */; };
+        4731A8012041D45800FE9F50 /* decnumber.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7DE2041D45700FE9F50 /* decnumber.pdf */; };
+        4731A8022041D45800FE9F50 /* decnumber.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4731A7DE2041D45700FE9F50 /* decnumber.pdf */; };
+        4731A8032041D45800FE9F50 /* decDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DF2041D45700FE9F50 /* decDouble.c */; };
+        4731A8042041D45800FE9F50 /* decDouble.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7DF2041D45700FE9F50 /* decDouble.c */; };
+        4731A8072041D45800FE9F50 /* decContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7E12041D45700FE9F50 /* decContext.c */; };
+        4731A8082041D45800FE9F50 /* decContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 4731A7E12041D45700FE9F50 /* decContext.c */; };
+        4731A8092041D45800FE9F50 /* decNumberLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7E22041D45800FE9F50 /* decNumberLocal.h */; };
+        4731A80A2041D45800FE9F50 /* decNumberLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4731A7E22041D45800FE9F50 /* decNumberLocal.h */; };
+        4731A812204216F600FE9F50 /* MGDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A811204216F600FE9F50 /* MGDecimal.swift */; };
+        4731A813204216F600FE9F50 /* MGDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A811204216F600FE9F50 /* MGDecimal.swift */; };
+        4731A8152042180900FE9F50 /* ComplexDec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8142042180900FE9F50 /* ComplexDec.swift */; };
+        4731A8162042180900FE9F50 /* ComplexDec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8142042180900FE9F50 /* ComplexDec.swift */; };
+        4731A8182042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
+        4731A8192042183900FE9F50 /* complex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731A8172042183800FE9F50 /* complex.swift */; };
+        4731A81C2042D7EF00FE9F50 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4731A81B2042D7EF00FE9F50 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4731A76C2041CEAA00FE9F50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4731A7582041CEAA00FE9F50 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4731A7602041CEAA00FE9F50;
-			remoteInfo = DecNumber_iOS;
-		};
-		4731A78A2041CED600FE9F50 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4731A7582041CEAA00FE9F50 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4731A77F2041CED600FE9F50;
-			remoteInfo = DecNumber_Mac;
-		};
+        4731A76C2041CEAA00FE9F50 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 4731A7582041CEAA00FE9F50 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 4731A7602041CEAA00FE9F50;
+            remoteInfo = DecNumber_iOS;
+        };
+        4731A78A2041CED600FE9F50 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = 4731A7582041CEAA00FE9F50 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = 4731A77F2041CED600FE9F50;
+            remoteInfo = DecNumber_Mac;
+        };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4731A7612041CEAA00FE9F50 /* DecNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecNumber_iOS.h; sourceTree = "<group>"; };
-		4731A7652041CEAA00FE9F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecNumber_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecNumber_Tests.swift; sourceTree = "<group>"; };
-		4731A7712041CEAA00FE9F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4731A7802041CED600FE9F50 /* DecNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4731A7822041CED600FE9F50 /* DecNumber_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecNumber_Mac.h; sourceTree = "<group>"; };
-		4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecNumber_MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4731A7CF2041D45700FE9F50 /* decSingle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decSingle.c; sourceTree = "<group>"; };
-		4731A7D02041D45700FE9F50 /* decDPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decDPD.h; sourceTree = "<group>"; };
-		4731A7D12041D45700FE9F50 /* decNumberL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decNumberL.h; sourceTree = "<group>"; };
-		4731A7D22041D45700FE9F50 /* decContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decContext.h; sourceTree = "<group>"; };
-		4731A7D32041D45700FE9F50 /* decPacked.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decPacked.c; sourceTree = "<group>"; };
-		4731A7D42041D45700FE9F50 /* decQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decQuad.h; sourceTree = "<group>"; };
-		4731A7D52041D45700FE9F50 /* decSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decSingle.h; sourceTree = "<group>"; };
-		4731A7D72041D45700FE9F50 /* ICU-license.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ICU-license.html"; sourceTree = "<group>"; };
-		4731A7D82041D45700FE9F50 /* decDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decDouble.h; sourceTree = "<group>"; };
-		4731A7D92041D45700FE9F50 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		4731A7DA2041D45700FE9F50 /* decBasic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decBasic.c; sourceTree = "<group>"; };
-		4731A7DB2041D45700FE9F50 /* decPacked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decPacked.h; sourceTree = "<group>"; };
-		4731A7DC2041D45700FE9F50 /* decQuad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decQuad.c; sourceTree = "<group>"; };
-		4731A7DD2041D45700FE9F50 /* decNumber.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decNumber.c; sourceTree = "<group>"; };
-		4731A7DE2041D45700FE9F50 /* decnumber.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = decnumber.pdf; sourceTree = "<group>"; };
-		4731A7DF2041D45700FE9F50 /* decDouble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decDouble.c; sourceTree = "<group>"; };
-		4731A7E02041D45700FE9F50 /* decCommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decCommon.c; sourceTree = "<group>"; };
-		4731A7E12041D45700FE9F50 /* decContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decContext.c; sourceTree = "<group>"; };
-		4731A7E22041D45800FE9F50 /* decNumberLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decNumberLocal.h; sourceTree = "<group>"; };
-		4731A80E2042141A00FE9F50 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
-		4731A811204216F600FE9F50 /* MGDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDecimal.swift; sourceTree = "<group>"; };
-		4731A8142042180900FE9F50 /* ComplexDec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexDec.swift; sourceTree = "<group>"; };
-		4731A8172042183800FE9F50 /* complex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = complex.swift; sourceTree = "<group>"; };
-		4731A81B2042D7EF00FE9F50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+        4731A7612041CEAA00FE9F50 /* DecNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+        4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecNumber_iOS.h; sourceTree = "<group>"; };
+        4731A7652041CEAA00FE9F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecNumber_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecNumber_Tests.swift; sourceTree = "<group>"; };
+        4731A7712041CEAA00FE9F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        4731A7802041CED600FE9F50 /* DecNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DecNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+        4731A7822041CED600FE9F50 /* DecNumber_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecNumber_Mac.h; sourceTree = "<group>"; };
+        4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecNumber_MacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        4731A7CF2041D45700FE9F50 /* decSingle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decSingle.c; sourceTree = "<group>"; };
+        4731A7D02041D45700FE9F50 /* decDPD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decDPD.h; sourceTree = "<group>"; };
+        4731A7D12041D45700FE9F50 /* decNumberL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decNumberL.h; sourceTree = "<group>"; };
+        4731A7D22041D45700FE9F50 /* decContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decContext.h; sourceTree = "<group>"; };
+        4731A7D32041D45700FE9F50 /* decPacked.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decPacked.c; sourceTree = "<group>"; };
+        4731A7D42041D45700FE9F50 /* decQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decQuad.h; sourceTree = "<group>"; };
+        4731A7D52041D45700FE9F50 /* decSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decSingle.h; sourceTree = "<group>"; };
+        4731A7D72041D45700FE9F50 /* ICU-license.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ICU-license.html"; sourceTree = "<group>"; };
+        4731A7D82041D45700FE9F50 /* decDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decDouble.h; sourceTree = "<group>"; };
+        4731A7D92041D45700FE9F50 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+        4731A7DA2041D45700FE9F50 /* decBasic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decBasic.c; sourceTree = "<group>"; };
+        4731A7DB2041D45700FE9F50 /* decPacked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decPacked.h; sourceTree = "<group>"; };
+        4731A7DC2041D45700FE9F50 /* decQuad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decQuad.c; sourceTree = "<group>"; };
+        4731A7DD2041D45700FE9F50 /* decNumber.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decNumber.c; sourceTree = "<group>"; };
+        4731A7DE2041D45700FE9F50 /* decnumber.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = decnumber.pdf; sourceTree = "<group>"; };
+        4731A7DF2041D45700FE9F50 /* decDouble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decDouble.c; sourceTree = "<group>"; };
+        4731A7E02041D45700FE9F50 /* decCommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decCommon.c; sourceTree = "<group>"; };
+        4731A7E12041D45700FE9F50 /* decContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decContext.c; sourceTree = "<group>"; };
+        4731A7E22041D45800FE9F50 /* decNumberLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decNumberLocal.h; sourceTree = "<group>"; };
+        4731A80E2042141A00FE9F50 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+        4731A811204216F600FE9F50 /* MGDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDecimal.swift; sourceTree = "<group>"; };
+        4731A8142042180900FE9F50 /* ComplexDec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexDec.swift; sourceTree = "<group>"; };
+        4731A8172042183800FE9F50 /* complex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = complex.swift; sourceTree = "<group>"; };
+        4731A81B2042D7EF00FE9F50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4731A75D2041CEAA00FE9F50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7672041CEAA00FE9F50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A76B2041CEAA00FE9F50 /* DecNumber.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A77C2041CED600FE9F50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7852041CED600FE9F50 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7892041CED600FE9F50 /* DecNumber.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4731A75D2041CEAA00FE9F50 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7672041CEAA00FE9F50 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A76B2041CEAA00FE9F50 /* DecNumber.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A77C2041CED600FE9F50 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7852041CED600FE9F50 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7892041CED600FE9F50 /* DecNumber.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4731A7572041CEAA00FE9F50 = {
-			isa = PBXGroup;
-			children = (
-				4731A81B2042D7EF00FE9F50 /* README.md */,
-				4731A80F204214D500FE9F50 /* Decimals */,
-				4731A7972041CF1200FE9F50 /* CommonFiles */,
-				4731A7632041CEAA00FE9F50 /* DecNumber_iOS */,
-				4731A76E2041CEAA00FE9F50 /* DecNumber_Tests */,
-				4731A7812041CED600FE9F50 /* DecNumber_Mac */,
-				4731A7622041CEAA00FE9F50 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		4731A7622041CEAA00FE9F50 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4731A7612041CEAA00FE9F50 /* DecNumber.framework */,
-				4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */,
-				4731A7802041CED600FE9F50 /* DecNumber.framework */,
-				4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4731A7632041CEAA00FE9F50 /* DecNumber_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */,
-			);
-			path = DecNumber_iOS;
-			sourceTree = "<group>";
-		};
-		4731A76E2041CEAA00FE9F50 /* DecNumber_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */,
-				4731A7712041CEAA00FE9F50 /* Info.plist */,
-			);
-			path = DecNumber_Tests;
-			sourceTree = "<group>";
-		};
-		4731A7812041CED600FE9F50 /* DecNumber_Mac */ = {
-			isa = PBXGroup;
-			children = (
-				4731A7822041CED600FE9F50 /* DecNumber_Mac.h */,
-			);
-			path = DecNumber_Mac;
-			sourceTree = "<group>";
-		};
-		4731A7972041CF1200FE9F50 /* CommonFiles */ = {
-			isa = PBXGroup;
-			children = (
-				4731A7D92041D45700FE9F50 /* readme.txt */,
-				4731A7DE2041D45700FE9F50 /* decnumber.pdf */,
-				4731A7D72041D45700FE9F50 /* ICU-license.html */,
-				4731A7652041CEAA00FE9F50 /* Info.plist */,
-				4731A81A20421BD200FE9F50 /* include */,
-				4731A810204215A100FE9F50 /* libfiles */,
-			);
-			path = CommonFiles;
-			sourceTree = "<group>";
-		};
-		4731A80F204214D500FE9F50 /* Decimals */ = {
-			isa = PBXGroup;
-			children = (
-				4731A811204216F600FE9F50 /* MGDecimal.swift */,
-				4731A8142042180900FE9F50 /* ComplexDec.swift */,
-				4731A8172042183800FE9F50 /* complex.swift */,
-			);
-			path = Decimals;
-			sourceTree = "<group>";
-		};
-		4731A810204215A100FE9F50 /* libfiles */ = {
-			isa = PBXGroup;
-			children = (
-				4731A7E12041D45700FE9F50 /* decContext.c */,
-				4731A7DD2041D45700FE9F50 /* decNumber.c */,
-				4731A7D32041D45700FE9F50 /* decPacked.c */,
-				4731A7DF2041D45700FE9F50 /* decDouble.c */,
-				4731A7DC2041D45700FE9F50 /* decQuad.c */,
-				4731A7CF2041D45700FE9F50 /* decSingle.c */,
-				4731A7E02041D45700FE9F50 /* decCommon.c */,
-				4731A7DA2041D45700FE9F50 /* decBasic.c */,
-			);
-			path = libfiles;
-			sourceTree = "<group>";
-		};
-		4731A81A20421BD200FE9F50 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				4731A80E2042141A00FE9F50 /* module.map */,
-				4731A7D22041D45700FE9F50 /* decContext.h */,
-				4731A7D12041D45700FE9F50 /* decNumberL.h */,
-				4731A7E22041D45800FE9F50 /* decNumberLocal.h */,
-				4731A7DB2041D45700FE9F50 /* decPacked.h */,
-				4731A7D82041D45700FE9F50 /* decDouble.h */,
-				4731A7D42041D45700FE9F50 /* decQuad.h */,
-				4731A7D52041D45700FE9F50 /* decSingle.h */,
-				4731A7D02041D45700FE9F50 /* decDPD.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
+        4731A7572041CEAA00FE9F50 = {
+            isa = PBXGroup;
+            children = (
+                4731A81B2042D7EF00FE9F50 /* README.md */,
+                4731A80F204214D500FE9F50 /* Decimals */,
+                4731A7972041CF1200FE9F50 /* CommonFiles */,
+                4731A7632041CEAA00FE9F50 /* DecNumber_iOS */,
+                4731A76E2041CEAA00FE9F50 /* DecNumber_Tests */,
+                4731A7812041CED600FE9F50 /* DecNumber_Mac */,
+                4731A7622041CEAA00FE9F50 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        4731A7622041CEAA00FE9F50 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                4731A7612041CEAA00FE9F50 /* DecNumber.framework */,
+                4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */,
+                4731A7802041CED600FE9F50 /* DecNumber.framework */,
+                4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        4731A7632041CEAA00FE9F50 /* DecNumber_iOS */ = {
+            isa = PBXGroup;
+            children = (
+                4731A7642041CEAA00FE9F50 /* DecNumber_iOS.h */,
+            );
+            path = DecNumber_iOS;
+            sourceTree = "<group>";
+        };
+        4731A76E2041CEAA00FE9F50 /* DecNumber_Tests */ = {
+            isa = PBXGroup;
+            children = (
+                4731A76F2041CEAA00FE9F50 /* DecNumber_Tests.swift */,
+                4731A7712041CEAA00FE9F50 /* Info.plist */,
+            );
+            path = DecNumber_Tests;
+            sourceTree = "<group>";
+        };
+        4731A7812041CED600FE9F50 /* DecNumber_Mac */ = {
+            isa = PBXGroup;
+            children = (
+                4731A7822041CED600FE9F50 /* DecNumber_Mac.h */,
+            );
+            path = DecNumber_Mac;
+            sourceTree = "<group>";
+        };
+        4731A7972041CF1200FE9F50 /* CommonFiles */ = {
+            isa = PBXGroup;
+            children = (
+                4731A7D92041D45700FE9F50 /* readme.txt */,
+                4731A7DE2041D45700FE9F50 /* decnumber.pdf */,
+                4731A7D72041D45700FE9F50 /* ICU-license.html */,
+                4731A7652041CEAA00FE9F50 /* Info.plist */,
+                4731A81A20421BD200FE9F50 /* include */,
+                4731A810204215A100FE9F50 /* libfiles */,
+            );
+            path = CommonFiles;
+            sourceTree = "<group>";
+        };
+        4731A80F204214D500FE9F50 /* Decimals */ = {
+            isa = PBXGroup;
+            children = (
+                4731A811204216F600FE9F50 /* MGDecimal.swift */,
+                4731A8142042180900FE9F50 /* ComplexDec.swift */,
+                4731A8172042183800FE9F50 /* complex.swift */,
+            );
+            path = Decimals;
+            sourceTree = "<group>";
+        };
+        4731A810204215A100FE9F50 /* libfiles */ = {
+            isa = PBXGroup;
+            children = (
+                4731A7E12041D45700FE9F50 /* decContext.c */,
+                4731A7DD2041D45700FE9F50 /* decNumber.c */,
+                4731A7D32041D45700FE9F50 /* decPacked.c */,
+                4731A7DF2041D45700FE9F50 /* decDouble.c */,
+                4731A7DC2041D45700FE9F50 /* decQuad.c */,
+                4731A7CF2041D45700FE9F50 /* decSingle.c */,
+                4731A7E02041D45700FE9F50 /* decCommon.c */,
+                4731A7DA2041D45700FE9F50 /* decBasic.c */,
+            );
+            path = libfiles;
+            sourceTree = "<group>";
+        };
+        4731A81A20421BD200FE9F50 /* include */ = {
+            isa = PBXGroup;
+            children = (
+                4731A80E2042141A00FE9F50 /* module.map */,
+                4731A7D22041D45700FE9F50 /* decContext.h */,
+                4731A7D12041D45700FE9F50 /* decNumberL.h */,
+                4731A7E22041D45800FE9F50 /* decNumberLocal.h */,
+                4731A7DB2041D45700FE9F50 /* decPacked.h */,
+                4731A7D82041D45700FE9F50 /* decDouble.h */,
+                4731A7D42041D45700FE9F50 /* decQuad.h */,
+                4731A7D52041D45700FE9F50 /* decSingle.h */,
+                4731A7D02041D45700FE9F50 /* decDPD.h */,
+            );
+            path = include;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4731A75E2041CEAA00FE9F50 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7F52041D45800FE9F50 /* decDouble.h in Headers */,
-				4731A7E72041D45800FE9F50 /* decNumberL.h in Headers */,
-				4731A7E52041D45800FE9F50 /* decDPD.h in Headers */,
-				4731A7ED2041D45800FE9F50 /* decQuad.h in Headers */,
-				4731A7EF2041D45800FE9F50 /* decSingle.h in Headers */,
-				4731A7722041CEAA00FE9F50 /* DecNumber_iOS.h in Headers */,
-				4731A7FB2041D45800FE9F50 /* decPacked.h in Headers */,
-				4731A8092041D45800FE9F50 /* decNumberLocal.h in Headers */,
-				4731A7E92041D45800FE9F50 /* decContext.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A77D2041CED600FE9F50 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7F62041D45800FE9F50 /* decDouble.h in Headers */,
-				4731A7E82041D45800FE9F50 /* decNumberL.h in Headers */,
-				4731A7E62041D45800FE9F50 /* decDPD.h in Headers */,
-				4731A7EE2041D45800FE9F50 /* decQuad.h in Headers */,
-				4731A7F02041D45800FE9F50 /* decSingle.h in Headers */,
-				4731A7902041CED600FE9F50 /* DecNumber_Mac.h in Headers */,
-				4731A7FC2041D45800FE9F50 /* decPacked.h in Headers */,
-				4731A80A2041D45800FE9F50 /* decNumberLocal.h in Headers */,
-				4731A7EA2041D45800FE9F50 /* decContext.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4731A75E2041CEAA00FE9F50 /* Headers */ = {
+            isa = PBXHeadersBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7F52041D45800FE9F50 /* decDouble.h in Headers */,
+                4731A7E72041D45800FE9F50 /* decNumberL.h in Headers */,
+                4731A7E52041D45800FE9F50 /* decDPD.h in Headers */,
+                4731A7ED2041D45800FE9F50 /* decQuad.h in Headers */,
+                4731A7EF2041D45800FE9F50 /* decSingle.h in Headers */,
+                4731A7722041CEAA00FE9F50 /* DecNumber_iOS.h in Headers */,
+                4731A7FB2041D45800FE9F50 /* decPacked.h in Headers */,
+                4731A8092041D45800FE9F50 /* decNumberLocal.h in Headers */,
+                4731A7E92041D45800FE9F50 /* decContext.h in Headers */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A77D2041CED600FE9F50 /* Headers */ = {
+            isa = PBXHeadersBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7F62041D45800FE9F50 /* decDouble.h in Headers */,
+                4731A7E82041D45800FE9F50 /* decNumberL.h in Headers */,
+                4731A7E62041D45800FE9F50 /* decDPD.h in Headers */,
+                4731A7EE2041D45800FE9F50 /* decQuad.h in Headers */,
+                4731A7F02041D45800FE9F50 /* decSingle.h in Headers */,
+                4731A7902041CED600FE9F50 /* DecNumber_Mac.h in Headers */,
+                4731A7FC2041D45800FE9F50 /* decPacked.h in Headers */,
+                4731A80A2041D45800FE9F50 /* decNumberLocal.h in Headers */,
+                4731A7EA2041D45800FE9F50 /* decContext.h in Headers */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4731A7602041CEAA00FE9F50 /* DecNumber_iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4731A7752041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOS" */;
-			buildPhases = (
-				4731A75C2041CEAA00FE9F50 /* Sources */,
-				4731A75D2041CEAA00FE9F50 /* Frameworks */,
-				4731A75E2041CEAA00FE9F50 /* Headers */,
-				4731A75F2041CEAA00FE9F50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DecNumber_iOS;
-			productName = DecNumber_iOS;
-			productReference = 4731A7612041CEAA00FE9F50 /* DecNumber.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4731A7692041CEAA00FE9F50 /* DecNumber_iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4731A7782041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOSTests" */;
-			buildPhases = (
-				4731A7662041CEAA00FE9F50 /* Sources */,
-				4731A7672041CEAA00FE9F50 /* Frameworks */,
-				4731A7682041CEAA00FE9F50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4731A76D2041CEAA00FE9F50 /* PBXTargetDependency */,
-			);
-			name = DecNumber_iOSTests;
-			productName = DecNumber_iOSTests;
-			productReference = 4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4731A77F2041CED600FE9F50 /* DecNumber_Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4731A7912041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_Mac" */;
-			buildPhases = (
-				4731A77B2041CED600FE9F50 /* Sources */,
-				4731A77C2041CED600FE9F50 /* Frameworks */,
-				4731A77D2041CED600FE9F50 /* Headers */,
-				4731A77E2041CED600FE9F50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DecNumber_Mac;
-			productName = DecNumber_Mac;
-			productReference = 4731A7802041CED600FE9F50 /* DecNumber.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4731A7872041CED600FE9F50 /* DecNumber_MacTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4731A7942041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_MacTests" */;
-			buildPhases = (
-				4731A7842041CED600FE9F50 /* Sources */,
-				4731A7852041CED600FE9F50 /* Frameworks */,
-				4731A7862041CED600FE9F50 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4731A78B2041CED600FE9F50 /* PBXTargetDependency */,
-			);
-			name = DecNumber_MacTests;
-			productName = DecNumber_MacTests;
-			productReference = 4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
+        4731A7602041CEAA00FE9F50 /* DecNumber_iOS */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4731A7752041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOS" */;
+            buildPhases = (
+                4731A75C2041CEAA00FE9F50 /* Sources */,
+                4731A75D2041CEAA00FE9F50 /* Frameworks */,
+                4731A75E2041CEAA00FE9F50 /* Headers */,
+                4731A75F2041CEAA00FE9F50 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = DecNumber_iOS;
+            productName = DecNumber_iOS;
+            productReference = 4731A7612041CEAA00FE9F50 /* DecNumber.framework */;
+            productType = "com.apple.product-type.framework";
+        };
+        4731A7692041CEAA00FE9F50 /* DecNumber_iOSTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4731A7782041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOSTests" */;
+            buildPhases = (
+                4731A7662041CEAA00FE9F50 /* Sources */,
+                4731A7672041CEAA00FE9F50 /* Frameworks */,
+                4731A7682041CEAA00FE9F50 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                4731A76D2041CEAA00FE9F50 /* PBXTargetDependency */,
+            );
+            name = DecNumber_iOSTests;
+            productName = DecNumber_iOSTests;
+            productReference = 4731A76A2041CEAA00FE9F50 /* DecNumber_iOSTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
+        4731A77F2041CED600FE9F50 /* DecNumber_Mac */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4731A7912041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_Mac" */;
+            buildPhases = (
+                4731A77B2041CED600FE9F50 /* Sources */,
+                4731A77C2041CED600FE9F50 /* Frameworks */,
+                4731A77D2041CED600FE9F50 /* Headers */,
+                4731A77E2041CED600FE9F50 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = DecNumber_Mac;
+            productName = DecNumber_Mac;
+            productReference = 4731A7802041CED600FE9F50 /* DecNumber.framework */;
+            productType = "com.apple.product-type.framework";
+        };
+        4731A7872041CED600FE9F50 /* DecNumber_MacTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 4731A7942041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_MacTests" */;
+            buildPhases = (
+                4731A7842041CED600FE9F50 /* Sources */,
+                4731A7852041CED600FE9F50 /* Frameworks */,
+                4731A7862041CED600FE9F50 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                4731A78B2041CED600FE9F50 /* PBXTargetDependency */,
+            );
+            name = DecNumber_MacTests;
+            productName = DecNumber_MacTests;
+            productReference = 4731A7882041CED600FE9F50 /* DecNumber_MacTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4731A7582041CEAA00FE9F50 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "Computer Inspirations";
-				TargetAttributes = {
-					4731A7602041CEAA00FE9F50 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
-					};
-					4731A7692041CEAA00FE9F50 = {
-						CreatedOnToolsVersion = 9.2;
+        4731A7582041CEAA00FE9F50 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastSwiftUpdateCheck = 0920;
+                LastUpgradeCheck = 0930;
+                ORGANIZATIONNAME = "Computer Inspirations";
+                TargetAttributes = {
+                    4731A7602041CEAA00FE9F50 = {
+                        CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
-					};
-					4731A77F2041CED600FE9F50 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
-					};
-					4731A7872041CED600FE9F50 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = 4731A75B2041CEAA00FE9F50 /* Build configuration list for PBXProject "DecNumber" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 4731A7572041CEAA00FE9F50;
-			productRefGroup = 4731A7622041CEAA00FE9F50 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				4731A7602041CEAA00FE9F50 /* DecNumber_iOS */,
-				4731A7692041CEAA00FE9F50 /* DecNumber_iOSTests */,
-				4731A77F2041CED600FE9F50 /* DecNumber_Mac */,
-				4731A7872041CED600FE9F50 /* DecNumber_MacTests */,
-			);
-		};
+                    };
+                    4731A7692041CEAA00FE9F50 = {
+                        CreatedOnToolsVersion = 9.2;
+                        LastSwiftMigration = 1000;
+                        ProvisioningStyle = Automatic;
+                    };
+                    4731A77F2041CED600FE9F50 = {
+                        CreatedOnToolsVersion = 9.2;
+                        LastSwiftMigration = 0920;
+                        ProvisioningStyle = Manual;
+                    };
+                    4731A7872041CED600FE9F50 = {
+                        CreatedOnToolsVersion = 9.2;
+                        ProvisioningStyle = Automatic;
+                    };
+                };
+            };
+            buildConfigurationList = 4731A75B2041CEAA00FE9F50 /* Build configuration list for PBXProject "DecNumber" */;
+            compatibilityVersion = "Xcode 8.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+            );
+            mainGroup = 4731A7572041CEAA00FE9F50;
+            productRefGroup = 4731A7622041CEAA00FE9F50 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                4731A7602041CEAA00FE9F50 /* DecNumber_iOS */,
+                4731A7692041CEAA00FE9F50 /* DecNumber_iOSTests */,
+                4731A77F2041CED600FE9F50 /* DecNumber_Mac */,
+                4731A7872041CED600FE9F50 /* DecNumber_MacTests */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4731A75F2041CEAA00FE9F50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7F72041D45800FE9F50 /* readme.txt in Resources */,
-				4731A7F32041D45800FE9F50 /* ICU-license.html in Resources */,
-				4731A81C2042D7EF00FE9F50 /* README.md in Resources */,
-				4731A8012041D45800FE9F50 /* decnumber.pdf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7682041CEAA00FE9F50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A77E2041CED600FE9F50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7F82041D45800FE9F50 /* readme.txt in Resources */,
-				4731A7F42041D45800FE9F50 /* ICU-license.html in Resources */,
-				4731A8022041D45800FE9F50 /* decnumber.pdf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7862041CED600FE9F50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4731A75F2041CEAA00FE9F50 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7F72041D45800FE9F50 /* readme.txt in Resources */,
+                4731A7F32041D45800FE9F50 /* ICU-license.html in Resources */,
+                4731A81C2042D7EF00FE9F50 /* README.md in Resources */,
+                4731A8012041D45800FE9F50 /* decnumber.pdf in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7682041CEAA00FE9F50 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A77E2041CED600FE9F50 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7F82041D45800FE9F50 /* readme.txt in Resources */,
+                4731A7F42041D45800FE9F50 /* ICU-license.html in Resources */,
+                4731A8022041D45800FE9F50 /* decnumber.pdf in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7862041CED600FE9F50 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4731A75C2041CEAA00FE9F50 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7FD2041D45800FE9F50 /* decQuad.c in Sources */,
-				4731A7EB2041D45800FE9F50 /* decPacked.c in Sources */,
-				4731A7E32041D45800FE9F50 /* decSingle.c in Sources */,
-				4731A8182042183900FE9F50 /* complex.swift in Sources */,
-				4731A8152042180900FE9F50 /* ComplexDec.swift in Sources */,
-				4731A7FF2041D45800FE9F50 /* decNumber.c in Sources */,
-				4731A8072041D45800FE9F50 /* decContext.c in Sources */,
-				4731A8032041D45800FE9F50 /* decDouble.c in Sources */,
-				4731A812204216F600FE9F50 /* MGDecimal.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7662041CEAA00FE9F50 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7702041CEAA00FE9F50 /* DecNumber_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A77B2041CED600FE9F50 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7FE2041D45800FE9F50 /* decQuad.c in Sources */,
-				4731A7EC2041D45800FE9F50 /* decPacked.c in Sources */,
-				4731A7E42041D45800FE9F50 /* decSingle.c in Sources */,
-				4731A8192042183900FE9F50 /* complex.swift in Sources */,
-				4731A8162042180900FE9F50 /* ComplexDec.swift in Sources */,
-				4731A8002041D45800FE9F50 /* decNumber.c in Sources */,
-				4731A8082041D45800FE9F50 /* decContext.c in Sources */,
-				4731A8042041D45800FE9F50 /* decDouble.c in Sources */,
-				4731A813204216F600FE9F50 /* MGDecimal.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4731A7842041CED600FE9F50 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4731A7982041CFB900FE9F50 /* DecNumber_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        4731A75C2041CEAA00FE9F50 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7FD2041D45800FE9F50 /* decQuad.c in Sources */,
+                4731A7EB2041D45800FE9F50 /* decPacked.c in Sources */,
+                4731A7E32041D45800FE9F50 /* decSingle.c in Sources */,
+                4731A8182042183900FE9F50 /* complex.swift in Sources */,
+                4731A8152042180900FE9F50 /* ComplexDec.swift in Sources */,
+                4731A7FF2041D45800FE9F50 /* decNumber.c in Sources */,
+                4731A8072041D45800FE9F50 /* decContext.c in Sources */,
+                4731A8032041D45800FE9F50 /* decDouble.c in Sources */,
+                4731A812204216F600FE9F50 /* MGDecimal.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7662041CEAA00FE9F50 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7702041CEAA00FE9F50 /* DecNumber_Tests.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A77B2041CED600FE9F50 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7FE2041D45800FE9F50 /* decQuad.c in Sources */,
+                4731A7EC2041D45800FE9F50 /* decPacked.c in Sources */,
+                4731A7E42041D45800FE9F50 /* decSingle.c in Sources */,
+                4731A8192042183900FE9F50 /* complex.swift in Sources */,
+                4731A8162042180900FE9F50 /* ComplexDec.swift in Sources */,
+                4731A8002041D45800FE9F50 /* decNumber.c in Sources */,
+                4731A8082041D45800FE9F50 /* decContext.c in Sources */,
+                4731A8042041D45800FE9F50 /* decDouble.c in Sources */,
+                4731A813204216F600FE9F50 /* MGDecimal.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        4731A7842041CED600FE9F50 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                4731A7982041CFB900FE9F50 /* DecNumber_Tests.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4731A76D2041CEAA00FE9F50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4731A7602041CEAA00FE9F50 /* DecNumber_iOS */;
-			targetProxy = 4731A76C2041CEAA00FE9F50 /* PBXContainerItemProxy */;
-		};
-		4731A78B2041CED600FE9F50 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4731A77F2041CED600FE9F50 /* DecNumber_Mac */;
-			targetProxy = 4731A78A2041CED600FE9F50 /* PBXContainerItemProxy */;
-		};
+        4731A76D2041CEAA00FE9F50 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 4731A7602041CEAA00FE9F50 /* DecNumber_iOS */;
+            targetProxy = 4731A76C2041CEAA00FE9F50 /* PBXContainerItemProxy */;
+        };
+        4731A78B2041CED600FE9F50 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = 4731A77F2041CED600FE9F50 /* DecNumber_Mac */;
+            targetProxy = 4731A78A2041CED600FE9F50 /* PBXContainerItemProxy */;
+        };
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4731A7732041CEAA00FE9F50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4731A7742041CEAA00FE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4731A7762041CEAA00FE9F50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+        4731A7732041CEAA00FE9F50 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                CURRENT_PROJECT_VERSION = 1;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+                VERSIONING_SYSTEM = "apple-generic";
+                VERSION_INFO_PREFIX = "";
+            };
+            name = Debug;
+        };
+        4731A7742041CEAA00FE9F50 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                CURRENT_PROJECT_VERSION = 1;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+                VALIDATE_PRODUCT = YES;
+                VERSIONING_SYSTEM = "apple-generic";
+                VERSION_INFO_PREFIX = "";
+            };
+            name = Release;
+        };
+        4731A7762041CEAA00FE9F50 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+                CODE_SIGN_STYLE = Manual;
+                DEFINES_MODULE = YES;
+                DEVELOPMENT_TEAM = "";
+                DYLIB_COMPATIBILITY_VERSION = 1;
+                DYLIB_CURRENT_VERSION = 1;
+                DYLIB_INSTALL_NAME_BASE = "@rpath";
+                INFOPLIST_FILE = CommonFiles/Info.plist;
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                MODULEMAP_PRIVATE_FILE = "";
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
+                PRODUCT_NAME = DecNumber;
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SKIP_INSTALL = YES;
+                SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        4731A7772041CEAA00FE9F50 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+                CODE_SIGN_STYLE = Manual;
+                DEFINES_MODULE = YES;
+                DEVELOPMENT_TEAM = "";
+                DYLIB_COMPATIBILITY_VERSION = 1;
+                DYLIB_CURRENT_VERSION = 1;
+                DYLIB_INSTALL_NAME_BASE = "@rpath";
+                INFOPLIST_FILE = CommonFiles/Info.plist;
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                MODULEMAP_PRIVATE_FILE = "";
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
+                PRODUCT_NAME = DecNumber;
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SKIP_INSTALL = YES;
+                SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
+        4731A7792041CEAA00FE9F50 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = 6389FT2N69;
+                INFOPLIST_FILE = DecNumber_Tests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOSTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        4731A77A2041CEAA00FE9F50 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = 6389FT2N69;
+                INFOPLIST_FILE = DecNumber_Tests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOSTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.2;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
+        4731A7922041CED600FE9F50 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonFiles/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
-				PRODUCT_NAME = DecNumber;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4731A7772041CEAA00FE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+                COMBINE_HIDPI_IMAGES = YES;
+                DEFINES_MODULE = YES;
+                DEVELOPMENT_TEAM = "";
+                DYLIB_COMPATIBILITY_VERSION = 1;
+                DYLIB_CURRENT_VERSION = 1;
+                DYLIB_INSTALL_NAME_BASE = "@rpath";
+                FRAMEWORK_VERSION = A;
+                INFOPLIST_FILE = CommonFiles/Info.plist;
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+                MACOSX_DEPLOYMENT_TARGET = 10.12;
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
+                PRODUCT_NAME = DecNumber;
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SDKROOT = macosx;
+                SKIP_INSTALL = YES;
+                SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+                SWIFT_VERSION = 4.0;
+            };
+            name = Debug;
+        };
+        4731A7932041CED600FE9F50 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonFiles/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_PRIVATE_FILE = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOS";
-				PRODUCT_NAME = DecNumber;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4731A7792041CEAA00FE9F50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6389FT2N69;
-				INFOPLIST_FILE = DecNumber_Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4731A77A2041CEAA00FE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6389FT2N69;
-				INFOPLIST_FILE = DecNumber_Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4731A7922041CED600FE9F50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CommonFiles/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
-				PRODUCT_NAME = DecNumber;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		4731A7932041CED600FE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CommonFiles/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
-				PRODUCT_NAME = DecNumber;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		4731A7952041CED600FE9F50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6389FT2N69;
-				INFOPLIST_FILE = DecNumber_Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		4731A7962041CED600FE9F50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 6389FT2N69;
-				INFOPLIST_FILE = DecNumber_Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-MacTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
+                COMBINE_HIDPI_IMAGES = YES;
+                DEFINES_MODULE = YES;
+                DEVELOPMENT_TEAM = "";
+                DYLIB_COMPATIBILITY_VERSION = 1;
+                DYLIB_CURRENT_VERSION = 1;
+                DYLIB_INSTALL_NAME_BASE = "@rpath";
+                FRAMEWORK_VERSION = A;
+                INFOPLIST_FILE = CommonFiles/Info.plist;
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+                MACOSX_DEPLOYMENT_TARGET = 10.12;
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-Mac";
+                PRODUCT_NAME = DecNumber;
+                PROVISIONING_PROFILE_SPECIFIER = "";
+                SDKROOT = macosx;
+                SKIP_INSTALL = YES;
+                SWIFT_INCLUDE_PATHS = "$(SRCROOT)/CommonFiles/include";
+                SWIFT_VERSION = 4.0;
+            };
+            name = Release;
+        };
+        4731A7952041CED600FE9F50 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                CODE_SIGN_IDENTITY = "Mac Developer";
+                CODE_SIGN_STYLE = Automatic;
+                COMBINE_HIDPI_IMAGES = YES;
+                DEVELOPMENT_TEAM = 6389FT2N69;
+                INFOPLIST_FILE = DecNumber_Tests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+                MACOSX_DEPLOYMENT_TARGET = 10.13;
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-MacTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = macosx;
+                SWIFT_VERSION = 4.0;
+            };
+            name = Debug;
+        };
+        4731A7962041CED600FE9F50 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                CODE_SIGN_IDENTITY = "Mac Developer";
+                CODE_SIGN_STYLE = Automatic;
+                COMBINE_HIDPI_IMAGES = YES;
+                DEVELOPMENT_TEAM = 6389FT2N69;
+                INFOPLIST_FILE = DecNumber_Tests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+                MACOSX_DEPLOYMENT_TARGET = 10.13;
+                PRODUCT_BUNDLE_IDENTIFIER = "com.c-inspirations.DecNumber-MacTests";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = macosx;
+                SWIFT_VERSION = 4.0;
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4731A75B2041CEAA00FE9F50 /* Build configuration list for PBXProject "DecNumber" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4731A7732041CEAA00FE9F50 /* Debug */,
-				4731A7742041CEAA00FE9F50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4731A7752041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4731A7762041CEAA00FE9F50 /* Debug */,
-				4731A7772041CEAA00FE9F50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4731A7782041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4731A7792041CEAA00FE9F50 /* Debug */,
-				4731A77A2041CEAA00FE9F50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4731A7912041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4731A7922041CED600FE9F50 /* Debug */,
-				4731A7932041CED600FE9F50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4731A7942041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_MacTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4731A7952041CED600FE9F50 /* Debug */,
-				4731A7962041CED600FE9F50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        4731A75B2041CEAA00FE9F50 /* Build configuration list for PBXProject "DecNumber" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4731A7732041CEAA00FE9F50 /* Debug */,
+                4731A7742041CEAA00FE9F50 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4731A7752041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOS" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4731A7762041CEAA00FE9F50 /* Debug */,
+                4731A7772041CEAA00FE9F50 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4731A7782041CEAA00FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_iOSTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4731A7792041CEAA00FE9F50 /* Debug */,
+                4731A77A2041CEAA00FE9F50 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4731A7912041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_Mac" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4731A7922041CED600FE9F50 /* Debug */,
+                4731A7932041CED600FE9F50 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        4731A7942041CED600FE9F50 /* Build configuration list for PBXNativeTarget "DecNumber_MacTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                4731A7952041CED600FE9F50 /* Debug */,
+                4731A7962041CED600FE9F50 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
-	};
-	rootObject = 4731A7582041CEAA00FE9F50 /* Project object */;
+    };
+    rootObject = 4731A7582041CEAA00FE9F50 /* Project object */;
 }
