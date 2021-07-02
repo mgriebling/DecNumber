@@ -160,6 +160,7 @@ public struct MGDecimal {
         case .toNearestOrEven:          MGDecimal.roundMethod = .halfEven
         case .towardZero:               MGDecimal.roundMethod = .down
         case .up:                       MGDecimal.roundMethod = .ceiling
+        @unknown default: assert(false, "Unknown rounding rule switch case!")
         }
         var a = decimal
         var result = decNumber()
@@ -269,7 +270,7 @@ public struct MGDecimal {
     
     private static func digitToInt(_ digit: Character) -> Int? {
         let radixDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        if let digitIndex = radixDigits.index(of: digit) {
+        if let digitIndex = radixDigits.firstIndex(of: digit) {
             return radixDigits.distance(from: radixDigits.startIndex, to:digitIndex)
         }
         return nil   // Error illegal radix character
@@ -724,7 +725,7 @@ public struct MGDecimal {
 
 public extension MGDecimal {
     
-    public static var SINCOS_DIGITS : Int { return MGDecimal.maximumDigits }
+    static var SINCOS_DIGITS : Int { return MGDecimal.maximumDigits }
     
     /* Check for right angle multiples and if exact, return the apropriate
      * quadrant constant directly.
@@ -1018,7 +1019,7 @@ public extension MGDecimal {
      * We need to do some range reduction to guarantee that our Taylor series
      * converges rapidly.
      */
-    public func sinCos(sinv : inout MGDecimal?, cosv : inout MGDecimal?) {
+    func sinCos(sinv : inout MGDecimal?, cosv : inout MGDecimal?) {
         let v = self
         if v.isSpecial { // (decNumberIsSpecial(v)) {
             sinv?.setNAN(); cosv?.setNAN()
@@ -1028,7 +1029,7 @@ public extension MGDecimal {
         }
     }
     
-    public func sin() -> MGDecimal {
+    func sin() -> MGDecimal {
         let x = self
         var x2 = MGDecimal.zero
         var res : MGDecimal? = MGDecimal.zero
@@ -1045,7 +1046,7 @@ public extension MGDecimal {
         return res!
     }
     
-    public func cos() -> MGDecimal {
+    func cos() -> MGDecimal {
         let x = self
         var x2 = MGDecimal.zero
         var res : MGDecimal? = MGDecimal.zero
@@ -1062,7 +1063,7 @@ public extension MGDecimal {
         return res!
     }
     
-    public func tan() -> MGDecimal {
+    func tan() -> MGDecimal {
         let x = self
         var x2 = MGDecimal.zero
         var res : MGDecimal? = MGDecimal.zero
@@ -1083,21 +1084,21 @@ public extension MGDecimal {
         return res!
     }
     
-    public func arcSin() -> MGDecimal {
+    func arcSin() -> MGDecimal {
         var res = MGDecimal.zero
         MGDecimal.asin(res: &res, x: self)
         MGDecimal.convertFromRadians(res: &res, x: res)
         return res
     }
     
-    public func arcCos() -> MGDecimal {
+    func arcCos() -> MGDecimal {
         var res = MGDecimal.zero
         MGDecimal.acos(res: &res, x: self)
         MGDecimal.convertFromRadians(res: &res, x: res)
         return res
     }
     
-    public func arcTan() -> MGDecimal {
+    func arcTan() -> MGDecimal {
         let x = self
         var z = MGDecimal.zero
         if x.isSpecial {
@@ -1114,7 +1115,7 @@ public extension MGDecimal {
         return z
     }
     
-    public func arcTan2(b: MGDecimal) -> MGDecimal {
+    func arcTan2(b: MGDecimal) -> MGDecimal {
         var z = MGDecimal.atan2(y: self, x: b)
         MGDecimal.convertFromRadians(res: &z, x: z)
         return z
@@ -1167,7 +1168,7 @@ public extension MGDecimal {
         }
     }
     
-    public func sinh() -> MGDecimal {
+    func sinh() -> MGDecimal {
         let x = self
         if x.isSpecial {
             if x.isNaN { return MGDecimal.NaN }
@@ -1186,7 +1187,7 @@ public extension MGDecimal {
         self.decimal.bits |= UInt8(DECNEG+DECINF)
     }
     
-    public func cosh() -> MGDecimal {
+    func cosh() -> MGDecimal {
         let x = self
         var res : MGDecimal? = MGDecimal.zero
         if x.isSpecial {
@@ -1197,7 +1198,7 @@ public extension MGDecimal {
         return res!
     }
     
-    public func tanh() -> MGDecimal {
+    func tanh() -> MGDecimal {
         let x = self
         if x.isNaN { return MGDecimal.NaN }
         if x < 100 {
@@ -1224,7 +1225,7 @@ public extension MGDecimal {
         return v * w
     }
     
-    public func arcSinh() -> MGDecimal {
+    func arcSinh() -> MGDecimal {
         let x = self
         var y = x.sqr()             // decNumberSquare(&y, x);		// y = x^2
         var z = y + MGDecimal.one     // dn_p1(&z, &y);			// z = x^2 + 1
@@ -1235,7 +1236,7 @@ public extension MGDecimal {
     }
     
     
-    public func arcCosh() -> MGDecimal {
+    func arcCosh() -> MGDecimal {
         let x = self
         var res = x.sqr()           // decNumberSquare(res, x);	// r = x^2
         var z = res - MGDecimal.one   // dn_m1(&z, res);			// z = x^2 + 1
@@ -1244,7 +1245,7 @@ public extension MGDecimal {
         return z.ln()
     }
     
-    public func arcTanh() -> MGDecimal {
+    func arcTanh() -> MGDecimal {
         let x = self
         var res = MGDecimal.zero
         if x.isNaN { return MGDecimal.NaN }
@@ -1272,19 +1273,19 @@ public extension MGDecimal {
     /* Calculate permutations:
      * C(x, y) = P(x, y) / y! = x! / ( (x-y)! y! )
      */
-    public func comb (y: MGDecimal) -> MGDecimal {
+    func comb (y: MGDecimal) -> MGDecimal {
         return self.perm(y: y) / y.factorial()
     }
     
     /* Calculate permutations:
      * P(x, y) = x! / (x-y)!
      */
-    public func perm (y: MGDecimal) -> MGDecimal {
+    func perm (y: MGDecimal) -> MGDecimal {
         let xfact = self.factorial()
         return xfact / (self - y).factorial()
     }
     
-    public func gamma () -> MGDecimal {
+    func gamma () -> MGDecimal {
         let t = self
         let ndp = Double(MGDecimal.digits)
         
@@ -1380,7 +1381,7 @@ public extension MGDecimal {
         return rootTwoPi * arga1 ** (arg - 0.5) * arga2.exp() * sum
     }
     
-    public func factorial () -> MGDecimal {
+    func factorial () -> MGDecimal {
         let x = self + MGDecimal.one
         return x.gamma()
     }
@@ -1473,13 +1474,16 @@ extension MGDecimal : ExpressibleByFloatLiteral {
 
 //
 // Allows things like -> a : Set<MGDecimal> = [12.4, 15, 100]
-//
+
 
 extension MGDecimal : Hashable {
     
-    public var hashValue : Int {
-        return description.hashValue   // probably not very fast but not used much anyway
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(description.hashValue)
     }
+//    public var hashValue : Int {
+//        return description.hashValue   // probably not very fast but not used much anyway
+//    }
     
 }
 
@@ -1562,38 +1566,38 @@ precedencegroup ExponentPrecedence {
 
 public extension MGDecimal {
     
-    static public func % (lhs: MGDecimal, rhs: MGDecimal) -> MGDecimal { return lhs.remainder(rhs) }
-//    static public func * (lhs: Decimal, rhs: Decimal) -> Decimal { return lhs.mul(rhs) }
-//    static public func + (lhs: Decimal, rhs: Decimal) -> Decimal { return lhs.add(rhs) }
-    static public func / (lhs: MGDecimal, rhs: MGDecimal) -> MGDecimal { return lhs.div(rhs) }
-//    static public prefix func + (a: Decimal) -> Decimal { return a }
+    static func % (lhs: MGDecimal, rhs: MGDecimal) -> MGDecimal { return lhs.remainder(rhs) }
+//    static func * (lhs: Decimal, rhs: Decimal) -> Decimal { return lhs.mul(rhs) }
+//    static func + (lhs: Decimal, rhs: Decimal) -> Decimal { return lhs.add(rhs) }
+    static func / (lhs: MGDecimal, rhs: MGDecimal) -> MGDecimal { return lhs.div(rhs) }
+//    static prefix func + (a: Decimal) -> Decimal { return a }
     
-//    static public func -= (a: inout Decimal, b: Decimal) { a = a - b }
-//    static public func += (a: inout Decimal, b: Decimal) { a = a + b }
-//    static public func *= (a: inout Decimal, b: Decimal) { a = a * b }
-    static public func /= (a: inout MGDecimal, b: MGDecimal) { a = a / b }
-    static public func %= (a: inout MGDecimal, b: MGDecimal) { a = a % b }
-    static public func **= (a: inout MGDecimal, b: MGDecimal) { a = a ** b }
+//    static func -= (a: inout Decimal, b: Decimal) { a = a - b }
+//    static func += (a: inout Decimal, b: Decimal) { a = a + b }
+//    static func *= (a: inout Decimal, b: Decimal) { a = a * b }
+    static func /= (a: inout MGDecimal, b: MGDecimal) { a = a / b }
+    static func %= (a: inout MGDecimal, b: MGDecimal) { a = a % b }
+    static func **= (a: inout MGDecimal, b: MGDecimal) { a = a ** b }
     
-    static public func ** (base: MGDecimal, power: Int) -> MGDecimal { return base ** MGDecimal(power) }
-    static public func ** (base: Int, power: MGDecimal) -> MGDecimal { return MGDecimal(base) ** power }
-    static public func ** (base: MGDecimal, power: MGDecimal) -> MGDecimal { return base.pow(power) }
+    static func ** (base: MGDecimal, power: Int) -> MGDecimal { return base ** MGDecimal(power) }
+    static func ** (base: Int, power: MGDecimal) -> MGDecimal { return MGDecimal(base) ** power }
+    static func ** (base: MGDecimal, power: MGDecimal) -> MGDecimal { return base.pow(power) }
     
     //
     // Logical operators
     //
     
-    static public func & (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.and(b) }
-    static public func | (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.or(b) }
-    static public func ^ (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.xor(b) }
-    static public prefix func ~ (a: MGDecimal) -> MGDecimal { return a.not() }
+    static func & (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.and(b) }
+    static func | (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.or(b) }
+    static func ^ (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.xor(b) }
+    static prefix func ~ (a: MGDecimal) -> MGDecimal { return a.not() }
     
-    static public func &= (a: inout MGDecimal, b: MGDecimal) { a = a & b }
-    static public func |= (a: inout MGDecimal, b: MGDecimal) { a = a | b }
-    static public func ^= (a: inout MGDecimal, b: MGDecimal) { a = a ^ b }
+    static func &= (a: inout MGDecimal, b: MGDecimal) { a = a & b }
+    static func |= (a: inout MGDecimal, b: MGDecimal) { a = a | b }
+    static func ^= (a: inout MGDecimal, b: MGDecimal) { a = a ^ b }
     
-    static public func << (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.shift(b.abs) }
-    static public func >> (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.shift(-b.abs) }
+    static func << (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.shift(b.abs) }
+    static func >> (a: MGDecimal, b: MGDecimal) -> MGDecimal { return a.shift(-b.abs) }
     
 }
 
